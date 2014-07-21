@@ -34,3 +34,81 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-13 16:05:08
 
 
 Started GET "/assets/logo0.png" for 127.0.0.1 at 2014-07-13 16:05:08 +0100
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-21 15:07:55 +0100
+Processing by WwwController#index as HTML
+  Rendered www/index.html.erb within layouts/application (92.2ms)
+Completed 200 OK in 1609ms (Views: 1554.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/www.css?body=1" for 127.0.0.1 at 2014-07-21 15:07:58 +0100
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-21 15:07:59 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-21 15:07:59 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-21 15:07:59 +0100
+
+
+Started GET "/assets/jquery.cycle.all.js?body=1" for 127.0.0.1 at 2014-07-21 15:07:59 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-21 15:08:00 +0100
+
+
+Started GET "/assets/jquery.cycle2.min.js?body=1" for 127.0.0.1 at 2014-07-21 15:08:00 +0100
+
+
+Started GET "/assets/www.js?body=1" for 127.0.0.1 at 2014-07-21 15:08:00 +0100
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-21 15:08:00 +0100
+
+
+Started GET "/assets/logo0.png" for 127.0.0.1 at 2014-07-21 15:08:01 +0100
+
+
+Started GET "/assets/ao_flag.gif" for 127.0.0.1 at 2014-07-21 15:08:01 +0100
+
+
+Started GET "/assets/fb_icon_16.png" for 127.0.0.1 at 2014-07-21 15:08:01 +0100
+
+
+Started GET "/www/welcome" for 127.0.0.1 at 2014-07-21 15:08:19 +0100
+Processing by WwwController#welcome as HTML
+  Rendered www/welcome.html.erb within layouts/application (155.4ms)
+Completed 200 OK in 752ms (Views: 751.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/Banner_1.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_2.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_4.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_5.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_6.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_3.jpg" for 127.0.0.1 at 2014-07-21 15:08:20 +0100
+
+
+Started GET "/assets/Banner_7.jpg" for 127.0.0.1 at 2014-07-21 15:08:21 +0100
+
+
+Started GET "/assets/Banner_8.jpg" for 127.0.0.1 at 2014-07-21 15:08:21 +0100
+
+
+Started GET "/www/contactos" for 127.0.0.1 at 2014-07-21 15:08:25 +0100
+Processing by WwwController#contactos as HTML
+  Rendered www/contactos.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 578ms (Views: 577.6ms | ActiveRecord: 0.0ms)
