@@ -1,0 +1,77 @@
+// Place all the styles related to the www controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  width: 1024px;
+  margin: 0 auto;
+  background-color: #fff;
+  font-family: verdana;
+  padding-top: 50px;
+}
+
+.brandLogo{
+  /*width: 1024px;*/
+  height: 300px;
+  margin-top: 25px;
+  border: 0;
+}
+
+#contactsInfo{
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-size:15px;
+  color: #282E24;
+}
+
+
+#menu {
+  font-family: Coming Soon,cursive;
+}
+
+a.menu_items:link {
+  color: blue;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+a.menu_items:visited {
+  color: blue;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+a.menu_items:hover {
+  color: cornflowerblue;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+a.menu_items:active {
+  color: #333333;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+
+#page-banner {
+  background-color: #b3cc05;
+  height: 100px;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 50px;
+  line-height: 100px;
+  color: #ffffff;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(1, 82, 123);
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+}
+
+#page-content {
+  color: rgb(1, 82, 123);
+  font-family: Helvetica, Arial, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+footer {
+  font-size: 12px;
+  display: block;
+  background-color: #b3cc05;
+  // Add transparency effect to background
+}

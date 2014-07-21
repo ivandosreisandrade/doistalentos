@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DoisTalentos</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div align="center" id="menu" class="menu" style="/*border:dotted thin black;*/ height: 100px;">
+  <%= link_to image_tag("logo0.png", alt: "Dois Talentos", title: "Dois Talentos: Clique para ir para a página inicial", width: "100px", style: "float:left;"), root_path %>
+<br/><br/>
+  <%= link_to("Início", www_welcome_path, class: "menu_items", style: 'font-family: \"Coming Soon,cursive;\"') %>
+  <%= link_to("Quem Somos", www_quemsomos_path, class: "menu_items") %>
+  <%= link_to("Ensino Primário", www_ensino0_path, class: "menu_items") %>
+  <%= link_to("1º Ciclo", www_ensino1_path, class: "menu_items") %>
+  <%= link_to("2º Ciclo", www_ensino2_path, class: "menu_items") %>
+  <%= link_to("Técnico Profissional", www_ensino3_path, class: "menu_items") %>
+  <%= link_to("Contactos", www_contactos_path, class: "menu_items") %>
+</div>
+<hr style="background-color: #b3cc05; height: 10px; color: #b3cc05; margin: 0; border: 0;" />
+
+<%= yield %>
+
+<footer>
+  <div style="height:50px; border-right:1px solid #cccccc; display: inline-block;">
+    &copy; 2014 Colégio Dois Talentos.<br>
+    Este website foi desenvolvido por <strong><a href="http://www.linkedin.com/in/ivandosreisandrad" target="_blank">Ivan dos Reis Andrade</a></strong>.
+  </div>
+  <div style="border-right:1px solid #cccccc; width:140px; margin-left:45px; height:50px; font-weight:bold; display: inline-block;">
+    Siga-nos
+    <a href="https://www.facebook.com/colegiodoistalentos" target="_blank" class="icons sprite-fb" style="margin-left:10px">
+    <%= image_tag("fb_icon_16.png") %>
+    </a>
+  </div>
+  <div style="width:auto; height:50px; margin-left:40px; display: inline-block;">
+    <span style="display:block;font-weight:bold;">Contactos Rápidos</span>
+    <span style="padding:10px 0; border-right:1px solid #cccccc; padding-right:20px; margin-right:20px">
+      <i class="icons sprite-phone"></i> <%= image_tag("ao_flag.gif", height: "15px", title: "Angola") %> +244 911 234 567</span>
+    <span style="height:40px">
+
+      geral@doistalentos.org</span>
+  </div>
+</footer>
+
+</body>
+</html>
