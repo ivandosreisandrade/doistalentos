@@ -1,9 +1,57 @@
 <script type="text/javascript">
     $(document).ready(function() {
+        //$('#top_menu2').switchClass("menu_items", "activated_menu_item");
+        $('#top_menu2').attr("class", "activated_menu_item");
+
         $('#sidebar').hcSticky({
-            top: 50,
+            top: 20,
             bottomEnd: 100,
             wrapperClassName: 'sidebar-sticky'
+        });
+
+
+        // Cache selectors
+        // topMenuHeight: serve para aumentar um espaço à pagina para o caso de se usar um menu fixo no topo da página
+        var sideMenu = $("#sidebar"),
+            //topMenuHeight = sideMenu.outerHeight()+20,
+            topMenuHeight = 35,
+        // All list items
+            menuItems = sideMenu.find("a"),
+        // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+                var item = $($(this).attr("href"));
+                if (item.length) { return item; }
+            });
+
+        // Bind click handler to menu items
+        // so we can get a fancy scroll animation
+        // AQUI deve-se subtrair a altura do topMenuHeight para causar o aumento do espaço: $(href).offset().top-topMenuHeight+1;
+        menuItems.click(function(e){
+            var href = $(this).attr("href"),
+                offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+            $('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 500);
+            e.preventDefault();
+        });
+
+        // Bind to scroll
+        $(window).scroll(function(){
+            // Get container scroll position
+            var fromTop = $(this).scrollTop()+topMenuHeight;
+
+            // Get id of current scroll item
+            var cur = scrollItems.map(function(){
+                if ($(this).offset().top < fromTop)
+                    return this;
+            });
+            // Get the id of the current element
+            cur = cur[cur.length-1];
+            var id = cur && cur.length ? cur[0].id : "";
+            // Set/remove active class
+            menuItems
+                    .parent().removeClass("active")
+                    .end().filter("[href=#"+id+"]").parent().addClass("active");
         });
     });
 </script>
@@ -14,22 +62,45 @@
 
 <div id="sidebar">
   <ul>
-      <li>Sidebar Menu!</li>
-      <li>Sticked!</li>
+      <li><a href="#quem_somos">Quem Somos</a></li>
+      <li><a href="#galeria">Galeria de Fotos</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#parcerias">Parcerias</a></li>
   </ul>
 </div>
 <div id="sidebar-content">
 
-  <h2>Quem somos</h2>
+  <h2 id="quem_somos">Quem somos</h2>
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
 
   <h2>Quem somos</h2>
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+  Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+  incluindo pré-escolar até Pré-universitário.</p>
+  <br/><br/><br/>
+  <h2 id="quem_somos1">Quem somos 1</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
   <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+  Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+  incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+  Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+  incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <br/><br/><br/>
+
+
+  <h2 id="galeria">Galeria de Fotos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
@@ -41,6 +112,9 @@
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+  Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+  incluindo pré-escolar até Pré-universitário.</p>
   <h2>Quem somos</h2>
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
@@ -49,7 +123,50 @@
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
   <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <br/><br/><br/><br/><br/>
+
+
+  <h2 id="servicos">Serviços</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <br/><br/><br/><br/><br/>
+
+
+  <h2 id="projetos">Projetos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
   <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
@@ -62,5 +179,26 @@
     Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
     incluindo pré-escolar até Pré-universitário.</p>
 
+
+  <br/><br/><br/><br/><br/>
+  <h2 id="parcerias">Parcerias</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
+  <h2>Quem somos</h2>
+  <p>O Colégio Dois Talentos é uma moderna instituição escolar a funcionar na província do Huambo desde 2015.
+    Funciona com 15 salas de aula disponíveis. O colégio proporciona uma formação integral desde o 1º Nível,
+    incluindo pré-escolar até Pré-universitário.</p>
 
 </div>

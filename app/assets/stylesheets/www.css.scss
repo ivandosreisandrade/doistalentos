@@ -29,9 +29,16 @@ body{
   font-family: Coming Soon,cursive;
 }
 
+.activated_menu_item {
+  text-decoration: underline;
+  font-weight: bolder;
+  color: blue;
+}
+
 a.menu_items:link {
   color: blue;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-decoration: none;
 }
 a.menu_items:visited {
   color: blue;
@@ -40,6 +47,7 @@ a.menu_items:visited {
 a.menu_items:hover {
   color: cornflowerblue;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  text-decoration: underline;
 }
 a.menu_items:active {
   color: #333333;
@@ -55,6 +63,8 @@ a.menu_items:active {
   line-height: 100px;
   color: #ffffff;
   text-align: center;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
   -moz-border-radius-bottomleft: 10px;
   -moz-border-radius-bottomright: 10px;
   border-bottom-left-radius: 10px;
@@ -79,6 +89,7 @@ footer {
   font-size: 12px;
   display: block;
   background-color: #b3cc05;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   // Add transparency effect to background
@@ -90,12 +101,14 @@ footer div {
   padding-top: 15px;
 }
 
+
 #sidebar {
   float: left;
   margin-top: 20px;
   padding: 10px 20px 10px 20px;
-  width: 125px;
+  width: 150px;
   background-color: #fecf00;
+  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
@@ -106,13 +119,40 @@ footer div {
 #sidebar ul li {
   list-style: none;
   padding: 10px 0 10px 0;
+  font-size: 13px;
 }
+
 
 #sidebar-content {
   color: rgb(1, 82, 123);
   font-family: Helvetica, Arial, Tahoma, sans-serif;
   font-size: 14px;
   padding: 5px;
-  padding-left: 200px;
+  padding-left: 210px;
   text-align: justify;
+}
+
+
+#sidebar a {
+  // display: block;
+  // padding: 5px 25px 7px 25px;
+  // width: 4em;
+  text-align: center;
+  -webkit-transition: .3s all ease-out;
+  -moz-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+  color: #01527B;
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  border-bottom: 1px solid #b3cc05;
+  color: #01527B;
+  font-weight: bold;
+}
+
+#sidebar li.active a {
+  border-bottom: 3px solid #b3cc05;
+  color: #01527B;
+  font-weight: bold;
 }
