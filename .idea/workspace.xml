@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d254b3a-3ff9-49f5-a17d-a322da9feb74" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/www/ensino1.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/www/ensino2.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/www/ensino3.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/www/ensino0.html.erb" afterPath="$PROJECT_DIR$/app/views/www/ensino0.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/www/quemsomos.html.erb" afterPath="$PROJECT_DIR$/app/views/www/quemsomos.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="doistalentos.iws" />
@@ -418,7 +413,11 @@
       <created>1407881445981</created>
       <updated>1407881445982</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finished filtering the QuemSomos page.&#10;Updated some photos of photo galery.&#10;Enhanced the template for the ensino# pages.">
+      <created>1407961022891</created>
+      <updated>1407961022891</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -485,7 +484,8 @@
     <MESSAGE value="Commit from RubyMine" />
     <MESSAGE value="Completed Side Menu with moving effects on page scroll." />
     <MESSAGE value="Started filtering the QuemSomos page.&#10;Created the pre-release of photo galery.&#10;Created a first template for the ensino pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started filtering the QuemSomos page.&#10;Created the pre-release of photo galery.&#10;Created a first template for the ensino pages." />
+    <MESSAGE value="Finished filtering the QuemSomos page.&#10;Updated some photos of photo galery.&#10;Enhanced the template for the ensino# pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished filtering the QuemSomos page.&#10;Updated some photos of photo galery.&#10;Enhanced the template for the ensino# pages." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
