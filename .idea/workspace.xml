@@ -417,7 +417,11 @@
       <created>1407961022891</created>
       <updated>1407961022891</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished filtering the QuemSomos page.&#10;Updated some photos of photo galery.&#10;Enhanced the template for the ensino# pages.">
+      <created>1407962545464</created>
+      <updated>1407962545464</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -441,7 +445,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1535" height="799" extended-state="6" />
+    <frame x="65" y="-4" width="1535" height="799" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18660969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
