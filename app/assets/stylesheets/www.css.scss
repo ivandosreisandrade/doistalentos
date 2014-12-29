@@ -102,6 +102,18 @@ footer div {
   padding-top: 15px;
 }
 
+.developer {
+    color: #817976;
+}
+.developer:hover {
+    color: #000;
+    
+    /*Transition*/ 
+    -webkit-transition:All 1s ease;
+    -moz-transition:All 1s ease;
+    -o-transition:All 1s ease;
+}
+
 
 #sidebar {
   float: left;
